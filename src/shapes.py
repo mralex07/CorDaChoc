@@ -2,7 +2,7 @@ from lib import *
 from math import radians, sin, cos
 
 SWITCH_RISER_RADIUS = 0.8
-SWITCH_RISER_HEIGHT = 9.0
+SWITCH_RISER_HEIGHT = 4.2
 
 
 def switch_riser_raw_dot_fn():
@@ -12,6 +12,7 @@ def switch_riser_raw_dot_fn():
 switch_riser_raw_dot = switch_riser_raw_dot_fn()
 
 top_dot = translate(0, 0, SWITCH_RISER_HEIGHT)(switch_riser_raw_dot)
+
 
 def switch_riser_post_fn():
     post = translate(0, 0, SWITCH_RISER_HEIGHT / 2)(
