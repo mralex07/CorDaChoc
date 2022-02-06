@@ -34,8 +34,8 @@ extra_width = 3
 mount_height = keyswitch_height
 mount_width = keyswitch_width
 # use 10 for faster prototyping, 15 for real
-tenting_angle = 10.0
-z_offset = 8.0
+tenting_angle = 11.0
+z_offset = 9.0
 
 should_include_risers = False
 
@@ -429,7 +429,7 @@ def get_riser_offset_delta(row_col, idx):
     if row_col == [2, 4] and idx == square_idx_bl:
         return [2.5, 0]
     if row_col == [3, 2] and idx == square_idx_br:
-        return [-3.5, 0]
+        return [-3.5, 1]
     if row_col == [2, 1] and idx == square_idx_br:
         return [-3, 0]
     else:
@@ -590,7 +590,7 @@ def post_test():
 
 
 thumb_basic_postition = point_on_grid(num_rows_for_col(1), 1, 0, 0, 0)
-thumb_offsets = [17, 5.3, -5]
+thumb_offsets = [16, 4.8, -2.5]
 # thumb_offsets = [16, 7, -5]
 thumb_position = [sum(x) for x in zip(thumb_basic_postition, thumb_offsets)]
 
@@ -607,11 +607,11 @@ def thumb_placer(rot, move):
 
 
 thumb_r_placer = thumb_placer([14, -26, 12], [-17.4, -11.8, -4.2])
-thumb_m_placer = thumb_placer([10, -16, 20], [-35, -17, -11])
-thumb_l_placer = thumb_placer([6, -5, 35], [-54.8, -27.5, -15.5])
+thumb_m_placer = thumb_placer([8, -17, 22], [-36, -17.6, -12])
+thumb_l_placer = thumb_placer([6, -5, 30], [-54, -26.5, -16])
 
-thumb_bl_placer = thumb_placer([4, -10, 27], [-35.3, -38.2, -16])
-thumb_br_placer = thumb_placer([4, -26, 18], [-15.8, -30.7, -9.6])
+thumb_bl_placer = thumb_placer([4, -10, 27], [-35.3, -38.2, -18])
+thumb_br_placer = thumb_placer([4, -26, 18], [-15.8, -30.7, -11.6])
 
 thumb_placement_fns = [
     thumb_r_placer,
@@ -1051,7 +1051,7 @@ def screw_insert_all_shapes(shape):
         screw_insert(num_cols - 1, num_rows_for_col(num_cols - 1), shape, 6.8, 14.4),
         screw_insert(0, 0, shape, -6.2, -6),
         screw_insert(1, max_num_rows + 1, shape, -9.8, 3.4),
-        screw_insert(0, max_num_rows - 1, shape, -17.4, 1.7),
+        screw_insert(0, max_num_rows - 1, shape, -17.4, -2),
     )
 
 
@@ -1098,13 +1098,13 @@ def trrs_holder_hole():
     return translate(*trrs_key_holder_position())(union(rect_hole, cylinder_hole))
 
 
-usb_holder_hole_dims = [6.5, 15.0, 9.212]
-usb_holder_thickness = 2.0
+usb_holder_hole_dims = [9, 8, 3.5]
+usb_holder_thickness = 0.5
 
 
 def usb_holder_position():
     base_place = point_on_grid(0, 0, 0, keyswitch_width / 2, 0)
-    return [base_place[0] + 13, base_place[1], 9]
+    return [base_place[0] + 8, base_place[1] + 2, 4]
 
 
 def usb_holder_rim():
@@ -1194,11 +1194,11 @@ def right_shell():
             connectors(),
             case_walls(),
             screw_insert_all_shapes(screw_insert_outer),
-            all_caps(),
+            # all_caps(),
             thumb_switches(),
             thumb_walls(),
             thumb_connectors(),
-            thumb_caps(),
+            # thumb_caps(),
             thumb_to_body_connectors(),
             usb_holder_rim(),
         ),
