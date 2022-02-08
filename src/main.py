@@ -1200,10 +1200,15 @@ def right_shell():
             thumb_connectors(),
             # thumb_caps(),
             thumb_to_body_connectors(),
+
+            # trrs_holder(),
             usb_holder_rim(),
         ),
         union(
-            blocker(), screw_insert_all_shapes(screw_insert_inner), usb_holder_hole(),
+            blocker(),
+            screw_insert_all_shapes(screw_insert_inner),
+            # trrs_holder_hole(),
+            usb_holder_hole(),
         ),
     )
 
