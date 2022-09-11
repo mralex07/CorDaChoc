@@ -1,11 +1,9 @@
 # Yet another Dactyl Manuform Spinoff (Low Profile)
 
-![Photo](https://preview.redd.it/icsa6rm04ag81.jpg?width=4032&format=pjpg&auto=webp&s=5b12a9a51c0e561ee80878b5fc81ad74a673ef75)
+![Photo](left.png)
 
-This repo is a _fork of a_ re-implementation of the [Dactyl Manuform Tight](https://github.com/okke-formsma/dactyl-manuform-tight) in python, with a few of my own changes.
+This repo is a _fork of a_ re-implementation of the [Dactyl Manuform Tight](https://github.com/okke-formsma/dactyl-manuform-tight) in python, with [Corne](https://github.com/foostan/crkbd)-like layout and Kailh Choc v1 spacing.
 
-There are some hacks in here to get the border walls and thumb cluster to line up properly at the current tenting angle and key layout.
-I didn't build this script with the goal of making it easy to share and extend... so if you're using this repo as a starting point for your own dactyl build, good luck, and beware of some shard edges.
 
 ## Generating OpenSCAD Models
 
