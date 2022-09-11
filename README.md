@@ -1,4 +1,4 @@
-# Yet another Dactyl Manuform Spinoff (Low Profile)
+# CorDaChoc (Corne + Dactyl + Choc v1)
 
 ![Photo](left.png)
 
