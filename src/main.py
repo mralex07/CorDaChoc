@@ -19,7 +19,7 @@ keyswitch_width = 15
 
 plate_outer_width = keyhole_size + switch_rim_thickness * 2
 
-max_num_rows = 3
+max_num_rows = 4
 num_cols = 6
 num_pinky_columns = 2
 
@@ -67,7 +67,7 @@ def row_radius(col):
 # default 3
 # controls left-right tilt / tenting (higher number is more tenting)
 center_col = 3
-center_row = 1
+center_row = 2
 
 
 def column_extra_transform(col):
